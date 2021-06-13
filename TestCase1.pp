@@ -18,6 +18,7 @@ type
 	procedure OnePositiveDigitTest;
 	procedure OneNegativeDigitTest;
 	procedure FourPositiveDigitsTest;
+	procedure FourNegativeDigitsTest;
   end;
   
 implementation
@@ -40,6 +41,11 @@ end;
 procedure TTestCase1.FourPositiveDigitsTest;
 begin
   AssertEquals(2361, FConverter.Convert(1265));
+end;
+
+procedure TTestCase1.FourNegativeDigitsTest;
+begin
+  AssertEquals(-2361, FConverter.Convert(-1265));
 end;
 
 procedure TTestCase1.SetUp;
